@@ -19,7 +19,7 @@
 [从 js 事件循环看 Vue.nextTick 的原理和执行机制](https://github.com/Michael-lzg/my--article/blob/master/vue/从js事件循环看nextTick的原理和执行机制.md)  
 
 
-# webpack 篇
+## webpack 篇
 
 [2020年你不能不知道的webpack基本配置](https://github.com/Michael-lzg/my--article/blob/master/webpack/2020年你不能不知道的webpack基本配置.md)  
 [从零构建一个wbpack项目](https://github.com/Michael-lzg/my--article/blob/master/webpack/从零构建一个wbpack项目.md)  
@@ -28,7 +28,7 @@
 [搭建一个vue-cli4+webpack移动端框架](https://github.com/Michael-lzg/my--article/blob/master/webpack/搭建一个vue-cli4+webpack移动端框架.md)  
 
 
-# 其他
+## 其他
 
 [总结移动端H5开发常用技巧](https://github.com/Michael-lzg/my--article/blob/master/other/总结移动端H5开发常用技巧.md)   
 [总结几个移动端H5软键盘的大坑](https://github.com/Michael-lzg/my--article/blob/master/other/总结几个移动端H5软键盘的大坑.md)   
