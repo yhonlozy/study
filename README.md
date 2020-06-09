@@ -1,15 +1,15 @@
 ## javascript 篇
 
-[js数据类型总结](https://github.com/Michael-lzg/my--article/blob/master/javascript/js数据类型总结.md)  
+[js数据类型及其转化](https://github.com/Michael-lzg/my--article/blob/master/javascript/js数据类型总结.md)  
 [js作用域及闭包](https://github.com/Michael-lzg/my--article/blob/master/javascript/js作用域及闭包.md)  
 [js执行机制及eventLoop](https://github.com/Michael-lzg/my--article/blob/master/javascript/js执行机制及eventLoop.md)  
-[js对象及深拷贝](https://github.com/Michael-lzg/my--article/blob/master/javascript/js对象及深拷贝.md)  
-[js原型与原型链](https://github.com/Michael-lzg/my--article/blob/master/javascriptjs原型与原型链.md)  
+[js对象及深拷贝的实现](https://github.com/Michael-lzg/my--article/blob/master/javascript/js对象及深拷贝.md)  
+[js原型与原型链之总结](https://github.com/Michael-lzg/my--article/blob/master/javascriptjs原型与原型链.md)  
 [js继承的方法](https://github.com/Michael-lzg/my--article/blob/master/javascript/js继承的方法.md)  
-[this指向问题](https://github.com/Michael-lzg/my--article/blob/master/javascript/this指向问题.md)  
+[this,call,apply,bind](https://github.com/Michael-lzg/my--article/blob/master/javascript/this指向问题.md)  
 [总结js处理异步的方法](https://github.com/Michael-lzg/my--article/blob/master/javascript/js异步处理.md)  
 [你也许不知道的js高级函数](https://github.com/Michael-lzg/my--article/blob/master/javascript/js高级函数.md)  
-[js防抖与节流](https://github.com/Michael-lzg/my--article/blob/master/javascript/js防抖与节流.md)  
+[浅谈js防抖与节流](https://github.com/Michael-lzg/my--article/blob/master/javascript/js防抖与节流.md)  
 
 ## vue 篇
 
@@ -30,9 +30,9 @@
 
 # 其他
 
-[总结移动端H5开发常用技巧](https://github.com/Michael-lzg/my--article/blob/master/other/总结移动端H5开发常用技巧.md)
-[总结几个移动端H5软键盘的大坑](https://github.com/Michael-lzg/my--article/blob/master/other/总结几个移动端H5软键盘的大坑.md) 
-[浅谈webscoket原理及其应用](https://github.com/Michael-lzg/my--article/blob/master/other/浅谈webscoket原理及其应用.md) 
-[谈谈关于文件上传下载那些事](https://github.com/Michael-lzg/my--article/blob/master/other/谈谈关于文件上传下载那些事.md)  
+[总结移动端H5开发常用技巧](https://github.com/Michael-lzg/my--article/blob/master/other/总结移动端H5开发常用技巧.md)   
+[总结几个移动端H5软键盘的大坑](https://github.com/Michael-lzg/my--article/blob/master/other/总结几个移动端H5软键盘的大坑.md)   
+[浅谈webscoket原理及其应用](https://github.com/Michael-lzg/my--article/blob/master/other/浅谈webscoket原理及其应用.md)  
+[谈谈关于文件上传下载那些事](https://github.com/Michael-lzg/my--article/blob/master/other/谈谈关于文件上传下载那些事.md)    
 [有趣的Canvas，你值得拥有！](https://github.com/Michael-lzg/my--article/blob/master/other/canvas基础.md)  
 [图片上传及canvas压缩图片](https://github.com/Michael-lzg/my--article/blob/master/other/canvas压缩图片.md)  
