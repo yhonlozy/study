@@ -10,7 +10,7 @@
 [总结js处理异步的方法](https://github.com/Michael-lzg/my--article/blob/master/javascript/js异步处理.md)  
 [你也许不知道的js高级函数](https://github.com/Michael-lzg/my--article/blob/master/javascript/js高级函数.md)  
 [浅谈js防抖与节流](https://github.com/Michael-lzg/my--article/blob/master/javascript/js防抖与节流.md)  
-[浅谈js防抖与节流](https://github.com/Michael-lzg/my--article/blob/master/javascript/你真的了解ES6的Set和Map吗.md)  
+[你真的了解ES6的Set和Map吗](https://github.com/Michael-lzg/my--article/blob/master/javascript/你真的了解ES6的Set和Map吗.md)  
 
 ## vue 篇
 
