@@ -50,10 +50,10 @@ plugins: [
 
 inject 有四个选项值
 
-- true：默认值，script 标签位于 html 文件的 body 底部
-- body：script 标签位于 html 文件的 body 底部（同 true）
-- head：script 标签位于 head 标签内
-- false：不插入生成的 js 文件，只是单纯的生成一个 html 文件
+- true：默认值，`script` 标签位于 `html` 文件的 `body` 底部
+- body：`script` 标签位于 `html` 文件的 `body` 底部（同 true）
+- head：`script` 标签位于 `head` 标签内
+- false：不插入生成的 js 文件，只是单纯的生成一个 `html` 文件
 
 多页应用打包
 
@@ -109,11 +109,11 @@ module.exports = {
 }
 ```
 
-这样执行 npm run build，可以看到 index.html 中仅引入了 index 的 js 文件，而 login.html 中也仅引入了 login 的 js 文件。
+这样执行 `npm run build`，可以看到 `index.html` 中仅引入了 index 的 js 文件，而 `login.html` 中也仅引入了 login 的 js 文件。
 
 ## clean-webpack-plugin
 
-clean-webpack-plugin 用于在打包前清理上一次项目生成的 bundle 文件，它会根据 output.path 自动清理文件夹；这个插件在生产环境用的频率非常高，因为生产环境经常会通过 hash 生成很多 bundle 文件，如果不进行清理的话每次都会生成新的，导致文件夹非常庞大。
+`clean-webpack-plugin` 用于在打包前清理上一次项目生成的 bundle 文件，它会根据 `output.path` 自动清理文件夹；这个插件在生产环境用的频率非常高，因为生产环境经常会通过 hash 生成很多 bundle 文件，如果不进行清理的话每次都会生成新的，导致文件夹非常庞大。
 
 ```js
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
@@ -141,14 +141,14 @@ plugins: [
 
 ## mini-css-extract-plugin
 
-将 CSS 提取为独立的文件的插件，对每个包含 css 的 js 文件都会创建一个 CSS 文件，支持按需加载 css 和 sourceMap。只能用在 webpack4 中，对比另一个插件 extract-text-webpack-plugin 有以下特点:
+将 CSS 提取为独立的文件的插件，对每个包含 css 的 js 文件都会创建一个 CSS 文件，支持按需加载 css 和 `sourceMap`。只能用在 webpack4 中，对比另一个插件 extract-text-webpack-plugin 有以下特点:
 
 - 异步加载
 - 不重复编译，性能更好
 - 更容易使用
 - 只针对 CSS
 
-这个插件应该只用在生产环境配置，并且在 loaders 链中不使用 style-loader, 而且这个插件暂时不支持 HMR
+这个插件应该只用在生产环境配置，并且在 `loaders` 链中不使用 `style-loader`, 而且这个插件暂时不支持 HMR
 
 ```js
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -201,7 +201,7 @@ module.exports = merge(common, {
 
 ## optimize-css-assets-webpack-plugin
 
-我们希望减小 css 打包后的体积，可以用到 optimize-css-assets-webpack-plugin。
+我们希望减小 css 打包后的体积，可以用到 `optimize-css-assets-webpack-plugin`。
 
 ```js
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin") // 压缩css代码
@@ -215,7 +215,7 @@ optimization: {
 
 ## UglifyJsPlugin
 
-uglifyJsPlugin 是 vue-cli 默认使用的压缩代码方式，用来对 js 文件进行压缩，从而减小 js 文件的大小，加速 load 速度。它使用的是单线程压缩代码，打包时间较慢，所以可以在开发环境将其关闭，生产环境部署时再把它打开。
+`uglifyJsPlugin` 是 `vue-cli` 默认使用的压缩代码方式，用来对 js 文件进行压缩，从而减小 js 文件的大小，加速 load 速度。它使用的是单线程压缩代码，打包时间较慢，所以可以在开发环境将其关闭，生产环境部署时再把它打开。
 
 ```js
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
@@ -234,7 +234,7 @@ plugins: [
 
 ## ParallelUglifyPlugin
 
-开启多个子进程，把对多个文件压缩的工作分别给多个子进程去完成，每个子进程其实还是通过 UglifyJS 去压缩代码，但是变成了并行执行。
+开启多个子进程，把对多个文件压缩的工作分别给多个子进程去完成，每个子进程其实还是通过 `UglifyJS` 去压缩代码，但是变成了并行执行。
 
 ```js
 const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin')
@@ -258,7 +258,7 @@ plugins: [
 
 ## terser-webpack-plugin
 
-Webpack4.0 默认是使用 terser-webpack-plugin 这个压缩插件，在此之前是使用 uglifyjs-webpack-plugin，两者的区别是后者对 ES6 的压缩不是很好，同时我们可以开启 parallel 参数，使用多进程压缩，加快压缩。
+Webpack4.0 默认是使用 `terser-webpack-plugin` 这个压缩插件，在此之前是使用 `uglifyjs-webpack-plugin`，两者的区别是后者对 ES6 的压缩不是很好，同时我们可以开启 `parallel` 参数，使用多进程压缩，加快压缩。
 
 ```js
 const TerserPlugin = require('terser-webpack-plugin') // 压缩js代码
@@ -276,7 +276,7 @@ optimization: {
 
 ## NoErrorsPlugin
 
-报错但不退出 webpack 进程。编译出现错误时，使用 NoEmitOnErrorsPlugin 来跳过输出阶段。这样可以确保输出资源不会包含错误。
+报错但不退出 webpack 进程。编译出现错误时，使用 `NoEmitOnErrorsPlugin` 来跳过输出阶段。这样可以确保输出资源不会包含错误。
 
 ```js
 plugins: [new webpack.NoEmitOnErrorsPlugin()]
@@ -284,7 +284,7 @@ plugins: [new webpack.NoEmitOnErrorsPlugin()]
 
 ## compression-webpack-plugin
 
-所有现代浏览器都支持 gzip 压缩，启用 gzip 压缩可大幅缩减传输资源大小，从而缩短资源下载时间，减少首次白屏时间，提升用户体验。
+所有现代浏览器都支持 `gzip` 压缩，启用 `gzip` 压缩可大幅缩减传输资源大小，从而缩短资源下载时间，减少首次白屏时间，提升用户体验。
 
 gzip 对基于文本格式文件的压缩效果最好（如：CSS、JavaScript 和 HTML），在压缩较大文件时往往可实现高达 70-90% 的压缩率，对已经压缩过的资源（如：图片）进行 gzip 压缩处理，效果很不好。
 
@@ -320,7 +320,7 @@ console.log(DESCRIPTION)
 
 ## ProvidePlugin
 
-自动加载模块。 任何时候，当 identifier 被当作未赋值的变量时， module 就会自动被加载，并且 identifier 会被这个 module 输出的内容所赋值。这是 webpack 自带的插件。
+自动加载模块。 任何时候，当 `identifier` 被当作未赋值的变量时， module 就会自动被加载，并且 `identifier` 会被这个 module 输出的内容所赋值。这是 webpack 自带的插件。
 
 ```js
 module.exports = {
@@ -341,7 +341,7 @@ module.exports = {
 
 ## DLLPlugin
 
-这是在一个额外的独立的 webpack 设置中创建一个只有 dll 的 `bundle(dll-only-bundle)`。 这个插件会生成一个名为 manifest.json 的文件，这个文件是用来让 `DLLReferencePlugin` 映射到相关的依赖上去的。
+这是在一个额外的独立的 webpack 设置中创建一个只有 dll 的 `bundle(dll-only-bundle)`。 这个插件会生成一个名为 `manifest.json` 的文件，这个文件是用来让 `DLLReferencePlugin` 映射到相关的依赖上去的。
 
 **使用步骤如下**
 
@@ -471,7 +471,7 @@ plugins: [
 
 ## copy-webpack-plugin
 
-我们在 public/index.html 中引入了静态资源，但是打包的时候 webpack 并不会帮我们拷贝到 dist 目录，因此 copy-webpack-plugin 就可以很好地帮我做拷贝的工作了。
+我们在 `public/index.html` 中引入了静态资源，但是打包的时候 webpack 并不会帮我们拷贝到 dist 目录，因此 `copy-webpack-plugin` 就可以很好地帮我做拷贝的工作了。
 
 ```js
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -494,7 +494,7 @@ module.exports = {
 
 这是 webpack 内置插件，它的作用是：忽略第三方包指定目录，让这些指定目录不要被打包进去。
 
-比如我们要使用 moment 这个第三方依赖库，该库主要是对时间进行格式化，并且支持多个国家语言。虽然我设置了语言为中文，但是在打包的时候，是会将所有语言都打包进去的。这样就导致包很大，打包速度又慢。对此，我们可以用 IgnorePlugin 使得指定目录被忽略，从而使得打包变快，文件变小。
+比如我们要使用 `moment` 这个第三方依赖库，该库主要是对时间进行格式化，并且支持多个国家语言。虽然我设置了语言为中文，但是在打包的时候，是会将所有语言都打包进去的。这样就导致包很大，打包速度又慢。对此，我们可以用 `IgnorePlugin` 使得指定目录被忽略，从而使得打包变快，文件变小。
 
 ```js
 const Webpack = require('webpack')
@@ -504,7 +504,7 @@ plugins: [
 ]
 ```
 
-我们虽然按照上面的方法忽略了包含’./locale/'该字段路径的文件目录，但是也使得我们使用的时候不能显示中文语言了，所以这个时候可以手动引入中文语言的目录。
+我们虽然按照上面的方法忽略了包含`’./locale/'`该字段路径的文件目录，但是也使得我们使用的时候不能显示中文语言了，所以这个时候可以手动引入中文语言的目录。
 
 ```js
 import moment from 'moment'
