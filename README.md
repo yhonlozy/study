@@ -37,3 +37,4 @@
 [谈谈关于文件上传下载那些事](https://github.com/Michael-lzg/my--article/blob/master/other/谈谈关于文件上传下载那些事.md)    
 [有趣的Canvas，你值得拥有！](https://github.com/Michael-lzg/my--article/blob/master/other/canvas基础.md)  
 [图片上传及canvas压缩图片](https://github.com/Michael-lzg/my--article/blob/master/other/canvas压缩图片.md)  
+[前端代码规范及优化](https://github.com/Michael-lzg/my--article/blob/master/other/前端代码规范及优化.md)  
