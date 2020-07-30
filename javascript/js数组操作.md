@@ -1,8 +1,10 @@
 # js 数组操作
 
+在开发中，数组的使用场景非常多，平日中也涉及到很多数组相关操作，对一些常见的操作方法进行总结和收藏，在开发中就能信手拈来，大大提高开发效率。
+
 ## 随机排序
 
-方法一、生成随机数
+1、生成随机数
 
 遍历数组，每次循环都随机一个在数组长度范围内的数，并交换本次循环的位置和随机数位置上的元素
 
@@ -24,7 +26,7 @@ console.log(randomSort1(arr1))
 console.log(randomSort1(arr1))
 ```
 
-方法二、生成新数组
+2、生成新数组
 
 1. 申明一个新的空数组,利用 while 循环，如果数组长度大于 0，就继续循环；
 2. 每次循环都随机一个在数组长度范围内的数，将随机数位置上的元素 push 到新数组里，
@@ -46,7 +48,7 @@ var arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 console.log(randomSort2(arr1))
 ```
 
-方法三、 arr.sort
+3、 arr.sort
 
 1. 如果 compareFunction(a, b)的返回值 小于 0 ，那么 a 会被排列到 b 之前；
 2. 如果 compareFunction(a, b)的返回值 等于 0 ，那么 a 和 b 的相对位置不变；
@@ -67,7 +69,7 @@ console.log(randomSort3(arr1))
 
 ## 数组对象排序
 
-1. 单个属性排序
+1、单个属性排序
 
 ```js
 function compare(property) {
@@ -87,7 +89,7 @@ let arr = [
 console.log(arr.sort(compare('age')))
 ```
 
-2. 多个属性排序
+2、多个属性排序
 
 ```js
 function by(name, minor) {
@@ -112,7 +114,7 @@ function by(name, minor) {
 
 ## 数组扁平化
 
-1. 调用 ES6 中的 flat 方法
+1、调用 ES6 中的 flat 方法
 
 ```js
 ary = arr.flat(Infinity)
@@ -120,7 +122,7 @@ ary = arr.flat(Infinity)
 console.log([1, [2, 3, [4, 5, [6, 7]]]].flat(Infinity))
 ```
 
-2. 普通递归
+2、普通递归
 
 ```js
 let result = []
@@ -140,7 +142,7 @@ let arr = [1, 2, [3, 4], [5, [6, 7]]]
 console.log(flatten(arr))
 ```
 
-3. 利用 reduce 函数迭代
+3、利用 reduce 函数迭代
 
 ```js
 function flatten(arr) {
@@ -153,7 +155,7 @@ let arr = [1, 2, [3, 4], [5, [6, 7]]]
 console.log(flatten(arr))
 ```
 
-4. 扩展运算符
+4、扩展运算符
 
 ```js
 function flatten(arr) {
@@ -169,7 +171,7 @@ console.log(flatten(arr))
 
 ## 数组去重
 
-1. 利用数组的 indexOf 下标属性来查询
+1、利用数组的 indexOf 下标属性来查询
 
 ```js
 function unique(arr) {
@@ -184,7 +186,7 @@ function unique(arr) {
 console.log(unique([1, 1, 2, 3, 5, 3, 1, 5, 6, 7, 4]))
 ```
 
-2. 先将原数组排序，在与相邻的进行比较，如果不同则存入新数组。
+2、先将原数组排序，在与相邻的进行比较，如果不同则存入新数组。
 
 ```js
 function unique(arr) {
@@ -200,7 +202,7 @@ function unique(arr) {
 console.log(unique([1, 1, 2, 3, 5, 3, 1, 5, 6, 7, 4]))
 ```
 
-3. 利用对象属性存在的特性，如果没有该属性则存入新数组。
+3、利用对象属性存在的特性，如果没有该属性则存入新数组。
 
 ```js
 function unique(arr) {
@@ -217,7 +219,7 @@ function unique(arr) {
 console.log(unique([1, 1, 2, 3, 5, 3, 1, 5, 6, 7, 4]))
 ```
 
-4. 利用数组原型对象上的 includes 方法。
+4、利用数组原型对象上的 includes 方法。
 
 ```js
 function unique(arr) {
@@ -232,7 +234,7 @@ function unique(arr) {
 console.log(unique([1, 1, 2, 3, 5, 3, 1, 5, 6, 7, 4]))
 ```
 
-5. 利用数组原型对象上的 filter 和 includes 方法。
+5、利用数组原型对象上的 filter 和 includes 方法。
 
 ```js
 function unique(arr) {
@@ -245,7 +247,7 @@ function unique(arr) {
 console.log(unique([1, 1, 2, 3, 5, 3, 1, 5, 6, 7, 4]))
 ```
 
-6. 利用 ES6 的 set 方法。
+6、利用 ES6 的 set 方法。
 
 ```js
 function unique(arr) {
@@ -282,7 +284,7 @@ function unique(arr) {
 
 ## 交集/并集/差集
 
-1. includes 方法结合 filter 方法
+1、includes 方法结合 filter 方法
 
 ```js
 let a = [1, 2, 3]
