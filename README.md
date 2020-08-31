@@ -19,6 +19,7 @@
 [总结vue知识体系之实用技巧](https://github.com/Michael-lzg/my--article/blob/master/vue/总结vue知识体系之实用技巧.md)  
 [总结vue知识体系之高级应用篇](https://github.com/Michael-lzg/my--article/blob/master/vue/总结vue知识体系之高级应用篇.md)  
 [从 js 事件循环看 Vue.nextTick 的原理和执行机制](https://github.com/Michael-lzg/my--article/blob/master/vue/从js事件循环看nextTick的原理和执行机制.md)  
+[谈谈数据状态管理和实现一个简易版vuex](https://github.com/Michael-lzg/my--article/blob/master/vue/谈谈数据状态管理和实现一个简易版vuex.md) 
 
 
 ## webpack 篇
