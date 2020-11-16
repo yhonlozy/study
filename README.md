@@ -23,7 +23,7 @@
 
 ## react 篇
 
-[react基础学习笔记](https://github.com/Michael-lzg/my--article/blob/master/react/react基础学习笔记.md)
+[react 基础学习笔记](https://github.com/Michael-lzg/my--article/blob/master/react/react基础学习笔记.md)
 
 ## webpack 篇
 
@@ -33,6 +33,7 @@
 [webpack 优化打包大全](https://github.com/Michael-lzg/my--article/blob/master/webpack/webpack优化打包大全.md)  
 [搭建一个 vue-cli4+webpack 移动端框架](https://github.com/Michael-lzg/my--article/blob/master/webpack/搭建一个vue-cli4+webpack移动端框架.md)  
 [总结 18 个 webpack 插件](https://github.com/Michael-lzg/my--article/blob/master/webpack/总结18个webpack插件.md)
+[webpack 的异步加载及分包策略](https://github.com/Michael-lzg/my--article/blob/master/webpack的异步加载及分包策略.md)
 
 ## 其他
 
