@@ -45,5 +45,5 @@
 [有趣的 Canvas，你值得拥有！](https://github.com/Michael-lzg/my--article/blob/master/other/canvas基础.md)  
 [图片上传及 canvas 压缩图片](https://github.com/Michael-lzg/my--article/blob/master/other/canvas压缩图片.md)  
 [前端代码规范及优化(一)](https://github.com/Michael-lzg/my--article/blob/master/other/前端代码规范.md)  
-[前端代码规范及优化(二)](https://github.com/Michael-lzg/my--article/blob/master/other/前端代码优化.md)
-[前端性能优化之图片懒加载)](https://github.com/Michael-lzg/my--article/blob/master/other/前端性能优化之图片懒加载.md)
+[前端代码规范及优化(二)](https://github.com/Michael-lzg/my--article/blob/master/other/前端代码优化.md)  
+[前端性能优化之图片懒加载](https://github.com/Michael-lzg/my--article/blob/master/other/前端性能优化之图片懒加载.md)
