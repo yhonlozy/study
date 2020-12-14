@@ -1,10 +1,10 @@
 # Vue 自定义指令
 
-在 Vue，除了核心功能默认内置的指令 (v-model 和 v-show)，Vue 也允许注册自定义指令。它的作用价值在于当开发人员在某些场景下需要对普通 DOM 元素进行操作。
+在 Vue，除了核心功能默认内置的指令 ( v-model 和 v-show )，Vue 也允许注册自定义指令。它的作用价值在于当开发人员在某些场景下需要对普通 DOM 元素进行操作。
 
 Vue 自定义指令有全局注册和局部注册两种方式。先来看看注册全局指令的方式，通过 `Vue.directive( id, [definition] )` 方式注册全局指令。然后在入口文件中进行 `Vue.use()` 调用。
 
-批量注册指令，新建 directives/index.js 文件
+批量注册指令，新建 `directives/index.js` 文件
 
 ```js
 import copy from './copy'
@@ -24,7 +24,7 @@ export default {
 }
 ```
 
-在 main.js 引入并调用
+在 `main.js` 引入并调用
 
 ```js
 import Vue from 'vue'
@@ -42,14 +42,14 @@ Vue.use(Directives)
 
 下面分享几个实用的 Vue 自定义指令
 
-- 复制粘贴指令 v-copy
-- 长按指令 v-longpress
-- 输入框防抖指令 v-debounce
-- 禁止表情及特殊字符 v-emoji
-- 图片懒加载 v-LazyLoad
-- 权限校验指令 v-premission
-- 实现页面水印 v-waterMarker
-- 拖拽指令 v-draggable
+- 复制粘贴指令 `v-copy`
+- 长按指令 `v-longpress`
+- 输入框防抖指令 `v-debounce`
+- 禁止表情及特殊字符 `v-emoji`
+- 图片懒加载 `v-LazyLoad`
+- 权限校验指令 `v-premission`
+- 实现页面水印 `v-waterMarker`
+- 拖拽指令 `v-draggable`
 
 ## v-copy
 
@@ -57,10 +57,10 @@ Vue.use(Directives)
 
 思路：
 
-1. 动态创建 textarea 标签，并设置 readOnly 属性及移出可视区域
-2. 将要 copy 的值赋给 textarea 标签的 value 属性，并插入到 body
-3. 选中值 textarea 并复制
-4. 将 body 中插入的 textarea 移除
+1. 动态创建 `textarea` 标签，并设置 `readOnly` 属性及移出可视区域
+2. 将要复制的值赋给 `textarea` 标签的 `value` 属性，并插入到 `body`
+3. 选中值 `textarea` 并复制
+4. 将 `body` 中插入的 `textarea` 移除
 5. 在第一次调用时绑定事件，在解绑时移除事件
 
 ```js
@@ -107,7 +107,7 @@ const copy = {
 export default copy
 ```
 
-使用：给 Dom 加上 v-copy 及复制的文本即可
+使用：给 Dom 加上 `v-copy` 及复制的文本即可
 
 ```html
 <template>
@@ -132,10 +132,10 @@ export default copy
 思路：
 
 1. 创建一个计时器， 2 秒后执行函数
-2. 当用户按下按钮时触发 mousedown 事件，启动计时器；用户松开按钮时调用 mouseout 事件。
-3. 如果 mouseup 事件 2 秒内被触发，就清除计时器，当作一个普通的点击事件
+2. 当用户按下按钮时触发 `mousedown` 事件，启动计时器；用户松开按钮时调用` mouseout` 事件。
+3. 如果 `mouseup` 事件 2 秒内被触发，就清除计时器，当作一个普通的点击事件
 4. 如果计时器没有在 2 秒内清除，则判定为一次长按，可以执行关联的函数。
-5. 在移动端要考虑 touchstart，touchend 事件
+5. 在移动端要考虑 `touchstart`，`touchend` 事件
 
 ```js
 const longpress = {
@@ -189,7 +189,7 @@ const longpress = {
 export default longpress
 ```
 
-使用：给 Dom 加上 longpress 及回调函数即可
+使用：给 Dom 加上 `v-longpress` 及回调函数即可
 
 ```html
 <template>
@@ -235,7 +235,7 @@ const debounce = {
 export default debounce
 ```
 
-使用：给 Dom 加上 v-debounce 及回调函数即可
+使用：给 Dom 加上 `v-debounce` 及回调函数即可
 
 ```html
 <template>
@@ -256,7 +256,7 @@ export default {
 
 背景：开发中遇到的表单输入，往往会有对输入内容的限制，比如不能输入表情和特殊字符，只能输入数字或字母等。
 
-我们常规方法是在每一个表单的@change 事件上做处理。
+我们常规方法是在每一个表单的 `on-change` 事件上做处理。
 
 ```html
 <template>
@@ -312,7 +312,7 @@ const emoji = {
 export default emoji
 ```
 
-使用：将需要校验的输入框加上 v-emoji 即可
+使用：将需要校验的输入框加上 `v-emoji` 即可
 
 ```html
 <template>
@@ -329,12 +329,12 @@ export default emoji
 思路：
 
 1. 图片懒加载的原理主要是判断当前图片是否到了可视区域这一核心逻辑实现的
-2. 拿到所有的图片 dome ，遍历每个图片判断当前图片是否到了可视区范围内
-3. 如果到了就设置图片的 src 属性，否则显示默认图片
+2. 拿到所有的图片 Dom ，遍历每个图片判断当前图片是否到了可视区范围内
+3. 如果到了就设置图片的 `src` 属性，否则显示默认图片
 
-图片懒加载有两种方式可以实现，一是绑定 srcoll 事件进行监听，二是使用 IntersectionObserver 判断图片是否到了可视区域，但是有浏览器兼容性问题。
+图片懒加载有两种方式可以实现，一是绑定 `srcoll` 事件进行监听，二是使用 `IntersectionObserver` 判断图片是否到了可视区域，但是有浏览器兼容性问题。
 
-下面封装一个懒加载指令兼容两种方法，判断浏览器是否支持 IntersectionObserver API，如果支持就使用 IntersectionObserver 实现懒加载，否则则使用 srcoll 事件监听 + 节流的方法实现。
+下面封装一个懒加载指令兼容两种方法，判断浏览器是否支持 `IntersectionObserver` API，如果支持就使用 `IntersectionObserver` 实现懒加载，否则则使用 `srcoll` 事件监听 + 节流的方法实现。
 
 ```js
 const LazyLoad = {
@@ -422,7 +422,7 @@ const LazyLoad = {
 export default LazyLoad
 ```
 
-使用，将组件内 <img> 标签的 src 换成 v-LazyLoad
+使用，将组件内 <img> 标签的 `src` 换成 `v-LazyLoad`
 
 ```html
 <img v-LazyLoad="xxx.jpg" />
@@ -430,9 +430,9 @@ export default LazyLoad
 
 ## v-permission
 
-背景：在一些后台管理系统，我们可能需要根据用户角色进行一些操作权限的判断，很多时候我们都是粗暴地给一个元素添加 v-if / v-show 来进行显示隐藏，但如果判断条件繁琐且多个地方需要判断，这种方式的代码不仅不优雅而且冗余。针对这种情况，我们可以通过全局自定义指令来处理。
+背景：在一些后台管理系统，我们可能需要根据用户角色进行一些操作权限的判断，很多时候我们都是粗暴地给一个元素添加 `v-if / v-show` 来进行显示隐藏，但如果判断条件繁琐且多个地方需要判断，这种方式的代码不仅不优雅而且冗余。针对这种情况，我们可以通过全局自定义指令来处理。
 
-需求：自定义一个权限指令，对需要权限判断的 dom 进行显示隐藏。
+需求：自定义一个权限指令，对需要权限判断的 Dom 进行显示隐藏。
 
 思路：
 
@@ -466,7 +466,7 @@ const permission = {
 export default permission
 ```
 
-使用：给 v-permission 赋值判断即可
+使用：给 `v-permission` 赋值判断即可
 
 ```html
 <div class="btns">
@@ -483,7 +483,7 @@ export default permission
 
 思路：
 
-1. 使用 canvas 特性生成 base64 格式的图片文件，设置其字体大小，颜色等。
+1. 使用 `canvas` 特性生成 `base64` 格式的图片文件，设置其字体大小，颜色等。
 2. 将其设置为背景图片，从而实现页面或组件水印效果
 
 ```js
@@ -528,9 +528,9 @@ export default waterMarker
 思路：
 
 1. 设置需要拖拽的元素为相对定位，其父元素为绝对定位。
-2. 鼠标按下(onmousedown)时记录目标元素当前的 left 和 top 值。
-3. 鼠标移动(onmousemove)时计算每次移动的横向距离和纵向距离的变化值，并改变元素的 left 和 top 值
-4. 鼠标松开(onmouseup)时完成一次拖拽
+2. 鼠标按下`(onmousedown)`时记录目标元素当前的 `left` 和 `top` 值。
+3. 鼠标移动`(onmousemove)`时计算每次移动的横向距离和纵向距离的变化值，并改变元素的 `left` 和 `top` 值
+4. 鼠标松开`(onmouseup)`时完成一次拖拽
 
 ```js
 const draggable = {
