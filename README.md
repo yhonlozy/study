@@ -11,7 +11,8 @@
 [你也许不知道的 js 高级函数](https://github.com/Michael-lzg/my--article/blob/master/javascript/js高级函数.md)  
 [浅谈 js 防抖与节流](https://github.com/Michael-lzg/my--article/blob/master/javascript/js防抖与节流.md)  
 [你真的了解 ES6 的 Set 和 Map 吗](https://github.com/Michael-lzg/my--article/blob/master/javascript/你真的了解ES6的Set和Map吗.md)  
-[js 数组操作大全](https://github.com/Michael-lzg/my--article/blob/master/javascript/js数组操作.md)
+[js 数组操作大全](https://github.com/Michael-lzg/my--article/blob/master/javascript/js数组操作.md)  
+[如何解决前端内存泄漏](https://github.com/Michael-lzg/my--article/blob/master/javascript/如何解决前端内存泄漏.md)  
 
 ## vue 篇
 
