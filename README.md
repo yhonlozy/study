@@ -50,3 +50,4 @@
 [前端代码规范及优化(二)](https://github.com/Michael-lzg/my--article/blob/master/other/前端代码优化.md)  
 [前端性能优化之图片懒加载](https://github.com/Michael-lzg/my--article/blob/master/other/前端性能优化之图片懒加载.md)  
 [前端性能优化图片篇](https://github.com/Michael-lzg/my--article/blob/master/other/前端性能优化图片篇.md)
+[分享几个实用的HTML5 API](https://github.com/Michael-lzg/my--article/blob/master/other/分享几个实用的API.md)
